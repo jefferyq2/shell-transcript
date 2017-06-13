@@ -22,7 +22,14 @@ esac
 # Get the path of the directory that contains this script.
 REPO_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# This causes the last command entered to be appended to the commands.txt file.
+# Set HISTFILESIZE to a negative number so the HISTFILE won't be truncated.
+HISTFILESIZE=-1
+
+# Write command history to a custom history file.
+HISTFILE="${REPO_PATH}/commands.txt"
+
 # The PROMPT_COMMAND is executed by bash every time before displaying your prompt.
-PROMPT_COMMAND="history 1 | sed -E 's/^\ *[0-9]+\ +//' >> ${REPO_PATH}/commands.txt"
+# This causes the history file to be written after each command completes
+# instead of waiting until the shell exits.
+PROMPT_COMMAND="history -a"
 
