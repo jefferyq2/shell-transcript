@@ -22,6 +22,9 @@ esac
 # Get the path of the directory that contains this script.
 REPO_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# Enable appending to the history file
+shopt -s histappend
+
 # Set HISTFILESIZE to a negative number so the HISTFILE won't be truncated.
 HISTFILESIZE=-1
 
