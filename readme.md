@@ -10,7 +10,7 @@ Setup
 -----
 
 Before you begin:
-* You'll need `gawk` (GNU awk) and `git` installed.
+* You'll need `gawk` (GNU awk) and `git` installed, and `xterm` if you're on Linux.
 * On Ubuntu/Debian, the default awk is mawk, so you'll need to install gawk.
 `sudo apt-get install gawk`
 * On Mac, you'll need to install gawk and a GNU version of sed. You can do this with [Homebrew](https://brew.sh/) (gawk, gnu-sed), [MacPorts](https://www.macports.org/) (gawk, gsed), or [Rudix](http://rudix.org/) (gawk, sed).
